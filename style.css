@@ -1,0 +1,132 @@
+body,html {
+    font-family: Arial, sans-serif;
+    background-color: #111a2e;
+    margin: 0;
+    padding: 0;
+    
+    color: #fff;
+
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0c121f;
+    
+    height: 20px;
+    color: #000000;
+
+}  
+.container-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    
+
+}
+
+.logo { 
+    width: 50px;
+    height: auto;
+    border-radius: 100%;
+}
+.container-menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0 40px;
+    color: #dad9d9;
+
+}   
+.titulo {
+    font-size: 24px;
+    color: #000000;
+    margin: 0;
+    background-image: url('imagen-titulo.png');
+    background-size: cover;
+    background-position: center;
+     height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px black;
+    
+}
+
+.paginas {
+    color: inherit;
+    text-decoration: none;
+    
+}
+.paginas:hover {
+    color: #797979;
+    
+}
+ 
+.inicio { padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #0e1524;
+}
+
+.galeria {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .galeria img {
+            flex: 1;              
+            max-width: 33.33%; 
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+ 
+footer {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #020617;
+            font-size: 14px;
+            color: #94a3b8;
+            text-align: center;
+            
+        }        
+
+#mapa {
+    height: 400px;
+    width: 400px;
+    margin: 50px;
+
+    
+
+}        
+.info-ubicación { 
+    background-color: #020617;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+    position: absolute;
+    bottom: 277px;
+    right: 55px;
+
+
+
+
+
+}
