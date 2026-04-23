@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ubicación</title>
-    <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="index.js">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imm game zone</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  
+   
+ 
 </head>
+
 <body>
-    <header>
+  <header>
     <div class="container-logo"><img src="logo.png" alt="logo" class="logo"></div>
-    <div class="container-menu">
+    <div class="container-icon-menu" onclick="toggleMenu()" id="icon">
+  ☰
+</div>
+    <div class="container-menu" id="menu">
       <a href="index.html" class="paginas"><h3>Inicio</h3></a>
       <a href="juegos.html" class="paginas"><h3>Juegos</h3></a>
       <a href="ubicación.html" class="paginas"><h3>Ubicación</h3></a>
@@ -20,38 +27,23 @@
       <a href="juegos-del-mes.html" class="paginas"><h3>Juegos del mes</h3></a>
       <a href="contactos.html" class="paginas"><h3>Contácto</h3></a>
     </div>
-      <!-- <div class="container-buscador">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-</svg>
-
-
-        <input type="text" placeholder="Buscar...">
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-</svg>
-
-    </div> -->
-
-   
+    
+      
   </header>
-<div class="contenedor-ubicacion">
- <div id="mapa" ></div>
+<div id="overlay" class="overlay" onclick="closeMenu()"></div>
 
-<div class="info-ubicación">
+ 
+
+    <div class="info-ubicación">
      <h1>Nuestra ubicación</h1>
-     <p>Nos puedes encontrar en Quezaltepeque, enfrente del Complejo Educativo Católico Sán Jóse. <br> <br> Para que pases un rato increible con todos tus amigos en nuestras Consolas y PCs a un precio mu accecible.</p>
+     <p>Nos puedes encontrar en Quezaltepeque, enfrente del Complejo Educativo Católico Sán Jóse. </p>
 
-</div>
+    
 
-</div>
+        <div id="mapa" ></div>
+        <p> Para que pases un rato increible con todos tus amigos en nuestras Consolas y PCs a un precio accecible.</p>
 
-
-
-
-
-
+    </div>
 
 
 
@@ -63,21 +55,46 @@
 </footer>
 
 
-  <script>
-  var map = L.map('mapa').setView([13.837723898488871, -89.27124720000313], 15); 
+<script>
+  var map = L.map('mapa').setView([13.837719305366917, -89.27119419201622], 15); // Coordenadas (ejemplo: San Salvador)
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
-  L.marker([13.837723898488871, -89.27124720000313]).addTo(map)
-    .bindPopup('Aquí estámos')
+  L.marker([13.837719305366917, -89.27119419201622]).addTo(map)
+    .bindPopup('Aquí está el ciber')
     .openPopup();
 </script>
 
 
 
 
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  const icon = document.getElementById("icon");
+  const overlay = document.getElementById("overlay");
 
+  menu.classList.toggle("active");
+  overlay.classList.toggle("active");
+
+  if (menu.classList.contains("active")) {
+    icon.innerHTML = "✖";
+  } else {
+    icon.innerHTML = "☰";
+  }
+}
+
+function closeMenu() {
+  const menu = document.getElementById("menu");
+  const icon = document.getElementById("icon");
+  const overlay = document.getElementById("overlay");
+
+  menu.classList.remove("active");
+  overlay.classList.remove("active");
+  icon.innerHTML = "☰";
+}
+</script>
 </body>
 </html>
