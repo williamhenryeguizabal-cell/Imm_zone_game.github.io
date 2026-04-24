@@ -3,12 +3,14 @@ body,html {
     background-color: #111a2e;
     margin: 0;
     padding: 0;
+    text-align: center;
     
     color: #fff;
 
 
 }
 
+ /* general */
 header {
     display: flex;
     justify-content: space-between;
@@ -51,6 +53,21 @@ header {
 
 
 }
+
+footer {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #020617;
+            font-size: 14px;
+            color: #94a3b8;
+            text-align: center;
+            
+        }        
+
+
+
+/* index */
+
 .titulo {
     font-size: 24px;
     color: #000000;
@@ -68,17 +85,6 @@ header {
     text-align: center;
     
 }
-
-.paginas {
-    color: inherit;
-    text-decoration: none;
-    
-}
-.paginas:hover {
-    color: #797979;
-    
-}
- 
 .inicio { padding: 20px;
     border-radius: 10px;
     max-width: 800px;
@@ -107,17 +113,26 @@ header {
             transition: 0.3s;
         }
 
- 
-footer {
-            margin-top: 40px;
-            padding: 25px;
-            background-color: #020617;
-            font-size: 14px;
-            color: #94a3b8;
-            text-align: center;
-            
-        }        
 
+
+
+
+.paginas {
+    color: inherit;
+    text-decoration: none;
+    
+}
+.paginas:hover {
+    color: #797979;
+    
+}
+ 
+
+
+
+
+ 
+/* ubicacion */
 
 
 #mapa {
@@ -143,15 +158,152 @@ footer {
   
   
 }
+
+/* juegos  */
+
+/* consolas */
+
+.container-consolas {
+    display: grid;
+    grid-template-columns: repeat(3,  1fr);
+    gap: 20px;
+}
+
+.item-consola {
+    border-radius: 10px;
+    background-color: #152038 ;
+    margin: 25px;
+}
+
+.item-consola:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    cursor: pointer;
+    
+}
+
+
+
+.item-consola img {
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+    transition: all .5s ;
+    
+}
+
+.item-consola figure {
+    overflow: hidden;
+   
+    
+}
+
+
+.item-consola:hover img {
+    transform: scale(1.2);
+    
+}
+
+.info-consola {
+    padding: 15px, 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}   
+
+.container-consolas a{
+     color: inherit;
+    text-decoration: none;
+
+
+}
+
+/* videojuegos */
+
+.container-juegos {
+    display: grid;
+    grid-template-columns: repeat(3,  1fr);
+    gap: 20px;
+}
+
+.item-juego {
+    border-radius: 10px;
+    background-color: #152038 ;
+    margin: 25px;
+}
+
+.item-juego:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    cursor: pointer;
+    
+}
+
+
+
+.item-juego img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: all .5s ;
+    
+}
+
+.item-juego figure {
+    overflow: hidden;
+   
+    
+}
+
+
+.item-juego:hover img {
+    transform: scale(1.2);
+    
+}
+
+.info-juego {
+    padding: 15px, 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}   
+
+
+
+
+
+
+
+
+
+/* eventos */
+
+
+
+
+
+/* juegos del mes */
+
+
+
+
+/* contactos */
+
     
 
 
 
-
+/* style telefono */
 
 
 @media (max-width: 768px) {
 
+
+    /* general */
   header {
     flex-direction: row;
     align-items: center;
@@ -204,6 +356,7 @@ footer {
 }
 
 
+  /* index */
   .galeria {
     flex-direction: row;
   }
@@ -213,7 +366,13 @@ footer {
     height: auto;
    width: 105px;
   }
+  .titulo {
+    height: 300px;
+    font-size: 18px;
+     }
 
+
+  /* ubicacion */
   #mapa {
     
     margin: 20px ;
@@ -225,10 +384,152 @@ footer {
     width: 250px;
   }
 
-  .titulo {
-    height: 300px;
-    font-size: 18px;
-  }
+  
+/* juegos */
+
+/* consolas */
+
+.container-consolas {
+    
+    
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     
+    
+
+}
+
+.item-consola {
+    border-radius: 10px;
+    background-color: #152038 ;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 20px;
+   height: 150px;
+   width: 320px;
+   justify-content: center;
+
+}
+
+
+
+
+
+.item-consola img {
+    width: 100%;
+    height: 100%;
+    max-width: 110px;
+    
+    object-fit: cover;
+   
+    
+}
+
+.item-consola figure {
+    overflow: hidden;
+   
+    
+}
+
+
+.item-consola:hover img {
+    transform: scale(1.2);
+    
+}
+
+.info-consola {
+    
+    
+   
+   
+    
+    margin-right: 20px;
+}   
+
+.container-consolas a{
+     color: inherit;
+    text-decoration: none;
+
+
+}
+
+/* videojuegos */
+
+.container-juegos {
+   display: flex;
+     align-items: center;
+     flex-direction: column;
+     
+    
+}
+
+.item-juego {
+    border-radius: 10px;
+    background-color: #152038 ;
+    display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 20px;
+   height: 150px;
+   width: 320px;
+   justify-content: center;
+
+}
+
+.item-juego:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    cursor: pointer;
+    
+}
+
+
+
+.item-juego img {
+   width: 100%;
+    height: 100%;
+    max-width: 110px;
+    
+    
+    object-fit: cover;
+}
+
+.item-juego figure {
+    overflow: hidden;
+   
+    
+}
+
+
+.item-juego:hover img {
+    transform: scale(1.2);
+    
+}
+
+.info-juego {
+    text-align: center;
+    margin-right: 20px;
+    max-width: 30%;
+    
+}   
+
+
+/* eventos */
+
+
+
+
+
+/* juegos del mes */
+
+
+
+
+/* contactos */
+
+  
+ 
   
 }
 
